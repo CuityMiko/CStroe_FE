@@ -24,4 +24,10 @@ module.exports = function(app) {
 
    // Java环境
    app.get('/environment/java', Index.ET_java);
+
+   // RN环境
+   app.get('/environment/rn', Index.ET_rn);
+
+   // Css
+   app.get('/wiki/css', Index.Wiki_css);
 };

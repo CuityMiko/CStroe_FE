@@ -26,6 +26,11 @@ exports.code = function(req, res) {
     res.render('wiki/code');
 };
 
+// Wiki_Css
+exports.Wiki_css = function(req, res) {
+    res.render('wiki/css');
+};
+
 // FE环境
 exports.ET_fe = function(req, res) {
     res.render('environment/fe');
@@ -35,3 +40,9 @@ exports.ET_fe = function(req, res) {
 exports.ET_java = function(req, res) {
     res.render('environment/java');
 };
+
+// RN环境
+exports.ET_rn = function(req, res) {
+    res.render('environment/rn');
+};
+
