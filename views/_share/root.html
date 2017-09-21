@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CStoreFE</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="stylesheet" href="/admin/plugins/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="/admin/css/global.css" media="all">
+    <link rel="stylesheet" href="/admin/plugins/font-awesome/css/font-awesome.min.css">
+    <style>
+        #app{
+            margin-top: 9rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1{
+            font-size: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="layui-layout layui-layout-admin">
+        <div class="layui-header header header-demo">
+            <div class="layui-main">
+                <div class="admin-login-box">
+                    <a class="logo" style="left: 0;" href="http://beginner.zhengjinfan.cn/demo/beginner_admin/">
+                        <span style="font-size: 22px;">CStoreFE</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="layui-side layui-bg-black" id="admin-side">
+            <div class="layui-side-scroll" id="admin-navbar-side" lay-filter="side">
+                <ul class="layui-nav layui-nav-tree" lay-filter="test">
+                    <li class="layui-nav-item"><a href="/fetools">开发工具</a></li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">开发环境</a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="/environment/fe">FE</a></dd>
+                            <dd><a href="/environment/java">Java</a></dd>
+                            <dd><a href="javascript:;">RN</a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">共享文档</a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="/INSTALL.html">FE环境安装</a></dd>
+                            <dd><a href="/Technology.html">FE技术栈</a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item layui-nav-itemed">
+                        <a href="javascript:;">WiKi</a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="/wiki">收藏链接</a></dd>
+                            <dd><a href="/wiki/jquery">JQuery</a></dd>
+                            <dd><a href="/wiki/code">Code</a></dd>
+                        </dl>
+                        <dl class="layui-nav-child">
+                            <dd><a target="_blank" href="https://www.awesomes.cn/repos/Applications/frameworks?sort=trend">前端技术趋势</a></dd>
+                            <dd><a target="_blank" href="https://www.awesomes.cn/repos/Applications/frameworks?sort=hot">前端热门技术</a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">Github</a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="https://github.com/ruanyf" target="_blank">阮一峰</a></dd>
+                            <dd><a href="https://github.com/alibaba" target="_blank">Alibaba</a></dd>
+                            <dd><a href="https://github.com/ElemeFE" target="_blank">饿了么前端</a></dd>
+                            <dd><a href="https://github.com/QianmiOpen" target="_blank">千米网</a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">Vue</a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="https://www.awesomes.cn/search?q=vue" target="_blank">Vue技术栈</a></dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="layui-body" style="bottom: 0;border-left: solid 1px #1AA094;" id="admin-body">
+            <div class="layui-tab admin-nav-card layui-tab-brief" lay-filter="admin-tab">
+                <div class="layui-tab-content" style="min-height: 150px; padding: 5px 0 0 0;">
+                    <div class="layui-tab-item layui-show">
+                        <%-body %>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layui-footer footer footer-demo" id="admin-footer">
+            <div class="layui-main">
+                <p>2017 &copy;
+                    <a href="/">CStoreFE</a> LGPL license
+                </p>
+            </div>
+        </div>
+        <div class="site-tree-mobile layui-hide">
+            <i class="layui-icon">&#xe602;</i>
+        </div>
+
+
+        <script type="text/javascript" src="/admin/plugins/layui/layui.js"></script>
+        <script type="text/javascript" src="/admin/datas/nav.js"></script>
+        <script src="/admin/js/index.js"></script>
+        <script>
+            layui.use('layer', function() {
+                var $ = layui.jquery,
+                    layer = layui.layer;
+            });
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<style scoped>
+    h3{
+        margin: 1rem;
+        font-size: 24px;
+    }
+</style>
+<div id="djquery">
+    <h3>jQuery选择器：</h3>
+    <pre>
+        选择器与选择器之间要加空格，选择器与过滤器之间不需要加空格。 
+        1.基本选择器：
+        1>#id =>id选择器
+        2>element =>标签选择器
+        3>.class =>类选择器
+        4>* =>选择所有元素
+        5>selector1,selector2 =>多条件选择器(例如：$("div,span,.myclass")表示选择了所有的div标签，span标签以及类样式为myclass的元素)
+    
+        2.层次选择器：
+        1>selector1 selector2 =>获取selector1下的所有selector2(例如：$("div span"),表示获得div标签下的所有span标签(包括后代span))
+        2>selector1 > selector2 =>获取selector1下的符合selector2的所有直接子元素（不包括后代元素）。($("div > span"))
+        3>selector1 + next =>匹配所有紧接在selector1后面的相邻元素。等同于$(selector1).next();
+        4>selector1 ~ siblings =>匹配selector1后面的所有兄弟元素。等同于$(selector1).nextAll();
+        5>$(selector1).siblings() =>获取匹配selector1的所有兄弟元素。
+    
+        3.表单选择器：
+        1>:input获得所有input、textarea、select标签
+        2>:text获得所有单行文本框
+        3>:password获得所有密码框
+        4>:radio获得所有单选按钮
+        5>:checkbox获得所有复选框
+        6>:submit获得所有的提交按钮
+        7>:image获得所有的图片域
+        8>:reset获得所有的重置按钮
+        9>:button获得所有的button
+        10>:file获得所有的文件域
+        
+        jQuery过滤器：【选择器与过滤器之间无需空格】
+        1>:first =>在已匹配的元素中获取第一个元素。等同于first()方法。
+        2>:last =>在已匹配的元素中获取最后一个元素。等同于last()方法。
+        3>:not(selector1) =>在已匹配的元素中，过滤掉符合selector1的元素。
+        4>:even =>在已匹配的元素中获取所有索引为基数的元素。
+        5>:odd =>在已匹配的元素中获取所有索引为偶数的元素。
+        6>:eq(index) =>在已匹配的元素中获取指定索引的元素。索引从0开始。
+        7>:gt(index) =>在已匹配的元素中获取索引大于index的元素。索引从0开始。
+        8>:lt(index) =>在已匹配的元素中获取索引小于index的元素。索引从0开始。
+        9>:header =>获取所有标题类型元素。例如：h1、h2、h3......
+        10>:animated =>获取正在执行动画效果的元素。（*）
+        11>:contains('text') =>获取包含指定文本的元素
+        12>:empty =>获取所有不包含子元素和文本的元素。（获取所有空元素）
+        13>:has(selector1) =>获取所有包含符合selector1选择器的元素。
+        14>:parent =>获取所有是"父元素"的元素（是"父元素"表示包含子元素或文本）。
+        ======================属性过滤器===================================
+        15>[attr] =>表示获取所有带名为"attr"属性的元素。例如：$("[class]"),表示获取所有带class属性的元素。
+        16>[attr=val] =>表示获取所有属性attr为val的元素。例如：$("[class=myclass]"),表示获取所有应用了myclass类的元素。
+        17>[attr!=val] =>获取所有属性attr不等于val的元素。
+        18>[attr^=val] =>获取所有属性attr以val开头的元素。
+        19>[attr$=val] =>获取所有属性attr以val结尾的元素。（正则表达式^开头，$结尾。）
+        20>[attr*=val] =>获取所有属性attr包含val的元素。
+        21>[selector1][selector2] =>满足多个条件的符合属性过滤器
+        ==========================表单对象属性过滤器==============================
+        22>:enabled =>获取表单中所有属性为可用的元素。
+        23>:disabled =>获取表单中所有属性为不可用的元素。（灰色的）
+        24>:checked =>获取表单中所有被选中的元素。
+        25>:selected =>获取表单中所有被选中的option元素。
+        ==========================可见性过滤器=============================
+        26>:hidden =>获取所有不可见元素，或者type为hidden的元素。（例如：display:none）
+        27>:visible =>获取所有可见元素。            
+    </pre>
+</div>

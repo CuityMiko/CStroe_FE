@@ -1,0 +1,266 @@
+<html>
+  <head>
+	  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>i5ting_ztree_toc:INSTALL</title>
+		<link href="toc/style/github-bf51422f4bb36427d391e4b75a1daa083c2d840e.css" media="all" rel="stylesheet" type="text/css"/>
+		<link href="toc/style/github2-d731afd4f624c99a4b19ad69f3083cd6d02b81d5.css" media="all" rel="stylesheet" type="text/css"/>
+		<link href="toc/css/zTreeStyle/zTreeStyle.css" media="all" rel="stylesheet" type="text/css"/>
+	  <style>
+		pre {
+		    counter-reset: line-numbering;
+		    border: solid 1px #d9d9d9;
+		    border-radius: 0;
+		    background: #fff;
+		    padding: 0;
+		    line-height: 23px;
+		    margin-bottom: 30px;
+		    white-space: pre;
+		    overflow-x: auto;
+		    word-break: inherit;
+		    word-wrap: inherit;
+		}
+
+		pre a::before {
+		  content: counter(line-numbering);
+		  counter-increment: line-numbering;
+		  padding-right: 1em; /* space after numbers */
+		  width: 25px;
+		  text-align: right;
+		  opacity: 0.7;
+		  display: inline-block;
+		  color: #aaa;
+		  background: #eee;
+		  margin-right: 16px;
+		  padding: 2px 10px;
+		  font-size: 13px;
+		  -webkit-touch-callout: none;
+		  -webkit-user-select: none;
+		  -khtml-user-select: none;
+		  -moz-user-select: none;
+		  -ms-user-select: none;
+		  user-select: none;
+		}
+
+		pre a:first-of-type::before {
+		  padding-top: 10px;
+		}
+
+		pre a:last-of-type::before {
+		  padding-bottom: 10px;
+		}
+
+		pre a:only-of-type::before {
+		  padding: 10px;
+		}
+
+		.highlight { background-color: #ffffcc } /* RIGHT */
+		</style>
+  </head>
+  <body>
+	  <div>
+				<div style='width:25%;'>
+						<ul id="tree" class="ztree" style='width:100%'>
+
+						</ul>
+				</div>
+        <div id='readme' style='width:70%;margin-left:20%;'>
+          	<article class='markdown-body'>
+            	<h3 id="-">一、安装压缩工具</h3>
+<ul>
+<li>1.winrar</li>
+</ul>
+<h3 id="-">二、安装浏览器</h3>
+<ul>
+<li>1.360极速浏览器</li>
+<li>2.Firefox火狐浏览器 </li>
+<li>3.Chrome谷歌浏览器</li>
+<li>4.安装有道云笔记</li>
+<li>5.配置翻墙的host文件</li>
+<li>1) C:\Windows\System32\drivers\etc 下的host文件</li>
+</ul>
+<h3 id="-nvm-node">三、通过nvm安装node</h3>
+<ul>
+<li>1.node安装包版本：<a href="https://npm.taobao.org/mirrors/node">https://npm.taobao.org/mirrors/node</a></li>
+<li>2.node常用版本：<pre><code>// v6.10.0
+https://npm.taobao.org/mirrors/node/v6.10.0/
+// v6.11.0
+https://npm.taobao.org/mirrors/node/v6.11.0/
+// 最新：v8.2.1
+https://npm.taobao.org/mirrors/node/v8.2.1/
+</code></pre></li>
+<li>3.创建devNode目录</li>
+<li>4.将nvm_x64压缩包解压到该目录下</li>
+<li>5.进入nvm目录修改setting配置文件内的路径指定为当前目录的路径</li>
+<li>6.将npm压缩包解压到nvm目录下</li>
+<li>7.修改环境变量：</li>
+<li>1) 此电脑（右击）-&gt; 属性 -&gt; 高级系统设置 -&gt; 高级 -&gt; 环境变量 内添加：<pre><code>NVM_HOME=C:\devNode\nvm
+NVM_SYMLINK=C:\devNode\nodejs
+NPM_HOME=C:\devNode\nvm\npm
+PATH=%NVM_HOME%;%NVM_SYMLINK%;%NPM_HOME%
+</code></pre></li>
+<li>8.<a href="http://note.youdao.com/share/?id=637ada36a4c544dc8702e260b40ec2e7&amp;type=note#/">http://note.youdao.com/share/?id=637ada36a4c544dc8702e260b40ec2e7&amp;type=note#/</a></li>
+<li>9.cmd下查看：<pre><code>// nvm 查看node版本
+nvm ls
+// nvm使用指定版本node
+nvm use 版本号
+// 查看版本
+node -v
+npm -v
+nvm -v
+// 切换版本
+nvm use 版本号
+</code></pre></li>
+<li>10.如果cmd下无法查看版本则将.npmrc文件放到当前用户的根目录下</li>
+</ul>
+<h3 id="-git">四、安装git</h3>
+<ul>
+<li>1.git下载地址：<a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></li>
+<li>2.将git安装在devNode/git/目录下</li>
+</ul>
+<h3 id="-vscode">五、安装VSCode</h3>
+<ul>
+<li>1.vscode下载地址：<a href="https://code.visualstudio.com/Download">https://code.visualstudio.com/Download</a></li>
+<li>2.安装vscode-icons插件</li>
+<li>3.打开vscode并点击ctrl+shift+p 输入icon 进而激活vscode-icons</li>
+<li>4.安装html、css、angular、vue、react、webpack相关插件</li>
+</ul>
+<h3 id="-cnpm-">六、安装淘宝cnpm镜像</h3>
+<ul>
+<li>1.npm install -g cnpm --registry=<a href="https://registry.npm.taobao.org">https://registry.npm.taobao.org</a></li>
+<li>2.安装node-dev:cnpm install node-dev -g</li>
+<li>3.如果安装完成后cmd中cnpm -v仍不可行则在用户根目录下有个.npmrc文件改成当前nvm存放路径然后再重新安装即可</li>
+</ul>
+<h3 id="-wps">七、安装WPS</h3>
+<h3 id="-svn">八、安装svn</h3>
+<h3 id="-java-android-">九、配置Java以及Android环境</h3>
+<ul>
+<li>0.<a href="http://note.youdao.com/share/?id=8ca0d641cfb50ab9bc545662b57577ea&amp;type=note#/">http://note.youdao.com/share/?id=8ca0d641cfb50ab9bc545662b57577ea&amp;type=note#/</a></li>
+<li>1.安装配置Java环境</li>
+<li>1) 安装jdk</li>
+<li>2.将android压缩包解压到根目录下</li>
+<li>3.配置Android环境<pre><code>配置Android环境变量：
+新建ANDROID_HOME=C:\android
+在PATH中添加%ANDROID_HOME%\tools;%ANDROID_HOME%\platform-tools;
+在cmd中输入adb出现如下内容则说明Android环境配置成功：
+http://note.youdao.com/noteshare?id=8ca0d641cfb50ab9bc545662b57577ea&amp;sub=7B245D8154C64A5EB69763748311A5CC
+</code></pre></li>
+<li>4.将.gradle压缩包放到用户的根目录下</li>
+<li>5.安装installer_r24.3.4-windows</li>
+<li>6.安装AndroidStudio(React-Native时必须安装，用来编译androidsdk版本)</li>
+</ul>
+<h3 id="-c-">十、安装C++环境</h3>
+<ul>
+<li>1.下载vs2015并指定安装C++部分即可</li>
+</ul>
+<h3 id="-ionic">十一、安装ionic</h3>
+<ul>
+<li>1.npm install -g cordova ionic</li>
+<li>2.ionic相关操作：<a href="http://note.youdao.com/noteshare?id=cb6acd7984ac6ed757fa7b223077471a&amp;sub=9B9712B626EB46DC89CAB2613CCC2198">http://note.youdao.com/noteshare?id=cb6acd7984ac6ed757fa7b223077471a&amp;sub=9B9712B626EB46DC89CAB2613CCC2198</a></li>
+</ul>
+<h3 id="-vue">十二、安装Vue</h3>
+<ul>
+<li>1.安装vue脚手架：npm install vue-cli -g</li>
+<li>2.利用vue-cli脚手架创建项目</li>
+<li>创建项目：vue init &lt;项目模板名称&gt; 项目名称:</li>
+<li>vue init simple vuepro 简单的Vue项目</li>
+<li>vue init webpack vuepro 带有webpack的Vue项目</li>
+<li>vue init webpack-simple vuepro 带有简单webpack的Vue项目</li>
+</ul>
+<h3 id="-react">十三、安装React</h3>
+<ul>
+<li>1.安装react脚手架：npm install create-react-app -g</li>
+<li>2.创建项目：create-react-app 项目名称</li>
+<li>3.相关使用：<a href="http://note.youdao.com/noteshare?id=039bce543a26ba5d53bceef52647e5e8&amp;sub=7BEEEC50B64F44CF8AE22B347E626EA9">http://note.youdao.com/noteshare?id=039bce543a26ba5d53bceef52647e5e8&amp;sub=7BEEEC50B64F44CF8AE22B347E626EA9</a></li>
+</ul>
+<h3 id="-reactnative">十四、安装ReactNative</h3>
+<ul>
+<li>1.安装：npm install react-native-cli -g</li>
+<li>2.初始化项目：react-native init 项目名称</li>
+<li>3.启动：react-native start</li>
+<li>4.打包：react-native run-android</li>
+<li>5.相关使用：<a href="http://note.youdao.com/noteshare?id=901c7257197b9167b2ec3ea00eff89cd&amp;sub=CA381A594E544249A8AC809DC8CF5B97">http://note.youdao.com/noteshare?id=901c7257197b9167b2ec3ea00eff89cd&amp;sub=CA381A594E544249A8AC809DC8CF5B97</a></li>
+<li>6.安装夜神模拟器</li>
+<li>7.React-Native与夜神模拟器的使用：<a href="http://www.cnblogs.com/hongguang-kim/p/5917633.html">http://www.cnblogs.com/hongguang-kim/p/5917633.html</a></li>
+<li>1) 夜神模拟器安装根目录下：nox_adb devices</li>
+<li>2) android sdk platform-tools下：adb.exe connect 127.0.0.1:62001</li>
+<li>3) 可以用浏览器访问<a href="http://localhost:8081/index.android.bundle?platform=android看看是否可以看到打包后的脚本。第一次访问通常需要十几秒，并且在packager的命令行可以看到进度条。">http://localhost:8081/index.android.bundle?platform=android看看是否可以看到打包后的脚本。第一次访问通常需要十几秒，并且在packager的命令行可以看到进度条。</a></li>
+</ul>
+<h3 id="-reactnative">十五、调试ReactNative</h3>
+<ul>
+<li>1.浏览器中打开：<a href="http://localhost:8081/debugger-ui">http://localhost:8081/debugger-ui</a></li>
+<li>2.模拟器中点击Debug Js即可进行调试</li>
+</ul>
+<h3 id="-md-html-i5ting_toc-">十六、将md文档转成html页面【i5ting_toc】</h3>
+<ul>
+<li>npm install i5ting_toc -g</li>
+<li>运行 i5ting_toc -f README.md 命令</li>
+<li>在生成的preview目录中运行http服务器查看md文件生成的html页面</li>
+<li>hs -o -p8020</li>
+</ul>
+<h3 id="-java-">十七、Java部分</h3>
+<p>0) 说明：<a href="https://www.tapd.cn/20215581/markdown_wikis/#1120215581001000060">https://www.tapd.cn/20215581/markdown_wikis/#1120215581001000060</a></p>
+<pre><code>i) 相关软件及版本
+    ```
+    JDK v1.8
+    Tomcat  v7.0 
+    MySQL v5.6
+    Nexus v2
+    Maven v3
+    ElasticSearch 1.7
+    redis 3.2
+    activemq5
+    ```
+</code></pre><p>1) deen项目的开发环境基于Java，开发工具：idea</p>
+<p>2) 安装1.8x版本的JDK并配置Java的环境变量</p>
+<p>3) 安装git并拉取代码：git clone -b dev <a href="http://192.168.0.199/KStore/deen.git">http://192.168.0.199/KStore/deen.git</a></p>
+<p>4) 配置Maven：</p>
+<pre><code>i) 下载maven压缩包：http://apache.fayea.com/maven/maven-3/3.3.9/binaries/
+
+ii) 将Maven压缩包解压到指定目录
+
+iii) 配置maven环境变量
+
+iiii) 替换maven根目录下conf目录下的settings文件
+
+iv) 监测maven是否安装成功：cmd -&gt; mvn -version
+</code></pre><p>5) 下载并将tomcat解压到指定目录</p>
+<p>6) 安装并激活idea2017：<a href="http://blog.csdn.net/sinat_15735647/article/details/74093074">http://blog.csdn.net/sinat_15735647/article/details/74093074</a></p>
+<p>7) idea2017配置jdk和maven：</p>
+<pre><code>1. 配置maven:
+
+    1) 在File-&gt;setting-&gt;Build,Execu....-&gt;Build Tools-&gt;Maven中指定Maven home directory为自己解压的Maven根目录并指定User setting file为Maven根目录下conf目录中settings.xml文件
+
+    2) File-&gt;Other Settings-&gt;Default Settings同上的操作
+
+2. 导入项目
+
+3. 配置jdk:
+
+    1) File-&gt;Project Structure...-&gt;Project中指定本机Java安装的jdk根目录/SDKs同样指定Java jdk的根目录
+
+    2) File-&gt;Other Settings-&gt;Default Project Structure...中同上操作
+</code></pre><p>8) reload Maven：右击项目名称Maven-&gt;ReImport</p>
+<p>9) 编译项目Build：点击项目右上角的绿色朝下的箭头进行编译</p>
+<p>10) 配置Tomcat：</p>
+
+          	</article>
+        </div>
+		</div>
+  </body>
+</html>
+<script type="text/javascript" src="toc/js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="toc/js/jquery.ztree.all-3.5.min.js"></script>
+<script type="text/javascript" src="toc/js/ztree_toc.js"></script>
+<script type="text/javascript" src="toc_conf.js"></script>
+
+<SCRIPT type="text/javascript" >
+<!--
+$(document).ready(function(){
+    var css_conf = eval(markdown_panel_style);
+    $('#readme').css(css_conf)
+    
+    var conf = eval(jquery_ztree_toc_opts);
+		$('#tree').ztree_toc(conf);
+});
+//-->
+</SCRIPT>

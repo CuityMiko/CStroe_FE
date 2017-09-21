@@ -1,0 +1,217 @@
+<html>
+  <head>
+	  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>i5ting_ztree_toc:Technology</title>
+		<link href="toc/style/github-bf51422f4bb36427d391e4b75a1daa083c2d840e.css" media="all" rel="stylesheet" type="text/css"/>
+		<link href="toc/style/github2-d731afd4f624c99a4b19ad69f3083cd6d02b81d5.css" media="all" rel="stylesheet" type="text/css"/>
+		<link href="toc/css/zTreeStyle/zTreeStyle.css" media="all" rel="stylesheet" type="text/css"/>
+	  <style>
+		pre {
+		    counter-reset: line-numbering;
+		    border: solid 1px #d9d9d9;
+		    border-radius: 0;
+		    background: #fff;
+		    padding: 0;
+		    line-height: 23px;
+		    margin-bottom: 30px;
+		    white-space: pre;
+		    overflow-x: auto;
+		    word-break: inherit;
+		    word-wrap: inherit;
+		}
+
+		pre a::before {
+		  content: counter(line-numbering);
+		  counter-increment: line-numbering;
+		  padding-right: 1em; /* space after numbers */
+		  width: 25px;
+		  text-align: right;
+		  opacity: 0.7;
+		  display: inline-block;
+		  color: #aaa;
+		  background: #eee;
+		  margin-right: 16px;
+		  padding: 2px 10px;
+		  font-size: 13px;
+		  -webkit-touch-callout: none;
+		  -webkit-user-select: none;
+		  -khtml-user-select: none;
+		  -moz-user-select: none;
+		  -ms-user-select: none;
+		  user-select: none;
+		}
+
+		pre a:first-of-type::before {
+		  padding-top: 10px;
+		}
+
+		pre a:last-of-type::before {
+		  padding-bottom: 10px;
+		}
+
+		pre a:only-of-type::before {
+		  padding: 10px;
+		}
+
+		.highlight { background-color: #ffffcc } /* RIGHT */
+		</style>
+  </head>
+  <body>
+	  <div>
+				<div style='width:25%;'>
+						<ul id="tree" class="ztree" style='width:100%'>
+
+						</ul>
+				</div>
+        <div id='readme' style='width:70%;margin-left:20%;'>
+          	<article class='markdown-body'>
+            	<h4 id="-">前端</h4>
+<ol>
+<li>项目框架：webpack + gulp + eslint + vue + vue-router + vuex + axios + element UI + node + npm + Mock + swagger + 其他
+ 1) vue: <pre><code> 1. 项目的数据驱动框架
+ 2. 官网：https://cn.vuejs.org/
+ 3. github：https://github.com/vuejs/vue
+ 4. vuejs官方仓储：https://github.com/vuejs
+</code></pre> 2) vue-router:<pre><code> 1. 项目的路由配置
+ 2. 官网：https://router.vuejs.org/zh-cn/
+ 3. github：https://github.com/vuejs/vue-router
+</code></pre> 3) vuex:<pre><code> 1. 项目状态管理
+ 2. 官网：https://vuex.vuejs.org/zh-cn/
+ 3. github：https://github.com/vuejs/vuex
+</code></pre> 4) axios:<pre><code> 1. 数据请求
+ 2. github：https://github.com/mzabriskie/axios
+</code></pre> 5) element UI：<pre><code> 1. 项目的UI框架
+ 2. 官网：http://element.eleme.io/#/zh-CN
+ 3. github：https://github.com/ElemeFE/element
+ 4. 选择此框架的优势：生态圈优异，社区活跃，持续迭代，社区的认可，star数高
+ 5. element UI还可以支持换肤、国际化
+</code></pre> 6) webpack:<pre><code> 1. SPA项目的构建工具
+ 2. 集成babel解析ES6、ES7以及.vue，代码编译
+ 3. 代码的分块、压缩以及优化
+ 4. 官网：https://webpack.js.org/
+ 5. github：https://github.com/webpack/webpack
+</code></pre> 7) gulp:<pre><code> 1. 项目的自动化
+ 2. 配合shell/python脚本做自动化部署
+ 3. 自动化测试
+ 4. 官网：https://gulpjs.com/
+ 5. github：https://github.com/gulpjs/gulp
+</code></pre> 8) eslint:<pre><code> 1. 项目代码规范化
+ 2. 官网：https://eslint.org/
+ 3. github：https://github.com/eslint/eslint
+</code></pre> 9) node:<pre><code> 1. 前端项目做服务器端渲染使用
+ 2. 文件操作
+ 3. redis、nosql、以及Mysql的操作
+ 4. 集成nginx做高并发
+ 5. 官网：https://nodejs.org/en/
+ 6. github：https://github.com/nodejs/node
+</code></pre> 10) nvm：<pre><code> 1. node版本管理工具
+ 2. 主要用来管理node版本，切换node版本
+ 3. github：https://github.com/creationix/nvm
+</code></pre> 11) npm:<pre><code> 1. node包管理工具
+ 2. 项目中使用到的第三方包的创建与更新管理
+ 3. 官网：https://www.npmjs.com/
+ 4. github：https://github.com/npm/npm
+</code></pre> 12) Mock:<pre><code> 1. 项目前期Mock数据定制接口
+ 2. easy-mock官网：https://easy-mock.com/login
+ 3. MockJs + rap : 
+ 4. MockJs : https://github.com/badoo/MockJS
+ 5. rap(阿里精品) : https://github.com/thx/RAP
+</code></pre> 13) swagger:<pre><code> 1. REST APIs文档生成工具
+ 2. 官网 : https://swagger.io/
+ 3. 前后端基于这个工具来约束
+</code></pre> 14) 其他：<pre><code> 1. iconfont：
+     1. 阿里推出的图标管理工具
+     2. elementUI框架中自带的图标有限
+     3. 官网：http://iconfont.cn/home/index?spm=a313x.7781069.1998910419.1.5b8bea97k3uWLP
+ 2. sass/less:
+     1. sass官网：http://sass-lang.com/
+     2. sass github：https://github.com/sass/sass
+     3. less官网：http://lesscss.org/
+     4. less github：https://github.com/less/less.js
+     5. 个人推荐less, 简单好用而又强大！
+ 3. ES6 / ES7
+     1. 项目中会大量用到ES6/ES7语法
+     2. 引入babel-polyfill处理浏览器对ES6等高级语法的支持
+ 4. 富文本编辑器
+     1. elementUI没有自带的富文本编辑器则推荐使用Vue-Quill-Editor，一个基于Quill、适用于Vue2的富文本编辑器  
+     2. github : https://github.com/surmon-china/vue-quill-editor
+ 5. ECharts
+     1. elementUI没有自带的图表插件则推荐使用ECharts，vue自己包装一个即可使用
+     2. 官网：http://echarts.baidu.com/api.html#echarts
+     3. github : https://github.com/ecomfe/echarts
+ 6. js-xlsx：
+     1. 对于Excel的操作
+     2. github : https://github.com/SheetJS/js-xlsx
+ 7. vue-amap:
+     1. 基于Vue2.0和高德地图的地图组件,ElementUI团队出品
+     2. 官网 : https://elemefe.github.io/vue-amap/#/
+     3. github : https://github.com/ElemeFE/vue-amap
+</code></pre></li>
+</ol>
+<h4 id="-">骨架</h4>
+<h5 id="vue-element-admin">vue-element-admin</h5>
+<ul>
+<li><ol>
+<li>github : <a href="https://github.com/PanJiaChen/vue-element-admin/">https://github.com/PanJiaChen/vue-element-admin/</a></li>
+</ol>
+</li>
+<li><ol>
+<li>demo-url : <a href="http://panjiachen.github.io/vue-element-admin/#/login">http://panjiachen.github.io/vue-element-admin/#/login</a> </li>
+</ol>
+</li>
+<li><ol>
+<li>local : <a href="http://192.168.0.104:9527/#/login">http://192.168.0.104:9527/#/login</a></li>
+</ol>
+</li>
+<li><ol>
+<li>git : <a href="https://github.com/PanJiaChen/vue-element-admin.git">https://github.com/PanJiaChen/vue-element-admin.git</a></li>
+</ol>
+</li>
+<li><ol>
+<li>一个非常健壮的后台管理系统 并且 star数很高</li>
+</ol>
+</li>
+<li><ol>
+<li>npm install -&gt; npm run dev -&gt; admin,admin</li>
+</ol>
+</li>
+<li><ol>
+<li>使用淘宝镜像源 ： npm install --registry=<a href="https://registry.npm.taobao.org">https://registry.npm.taobao.org</a></li>
+</ol>
+</li>
+</ul>
+<h4 id="-">序+</h4>
+<h5 id="-">一、开发工具</h5>
+<ol>
+<li>vscode
+ 1) 下载：<a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a>
+ 2) 插件：<a href="https://github.com/varHarrie/Dawn-Blossoms/issues/10">https://github.com/varHarrie/Dawn-Blossoms/issues/10</a></li>
+</ol>
+<h5 id="-mock">二、Mock</h5>
+<ol>
+<li>easymock
+ 1) <a href="https://easy-mock.com/">https://easy-mock.com/</a>
+ 2) mockjs：<a href="http://mockjs.com/">http://mockjs.com/</a></li>
+</ol>
+
+          	</article>
+        </div>
+		</div>
+  </body>
+</html>
+<script type="text/javascript" src="toc/js/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="toc/js/jquery.ztree.all-3.5.min.js"></script>
+<script type="text/javascript" src="toc/js/ztree_toc.js"></script>
+<script type="text/javascript" src="toc_conf.js"></script>
+
+<SCRIPT type="text/javascript" >
+<!--
+$(document).ready(function(){
+    var css_conf = eval(markdown_panel_style);
+    $('#readme').css(css_conf)
+    
+    var conf = eval(jquery_ztree_toc_opts);
+		$('#tree').ztree_toc(conf);
+});
+//-->
+</SCRIPT>
