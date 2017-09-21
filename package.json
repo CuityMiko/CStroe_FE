@@ -20,5 +20,9 @@
     "serve-favicon": "~2.3.0",
     "svg-captcha": "^1.2.1",
     "ueditor": "^1.2.0"
+  },
+  "devDependencies": {
+    "http": "0.0.0",
+    "socket.io": "^2.0.3"
   }
 }

@@ -16,14 +16,12 @@
                 <fieldset class="layui-elem-field">
                     <legend>1.页面锚点加动画</legend>
                     <div class="layui-field-box">
-                        <blockquote class="layui-elem-quote">
-                            <pre>
-                                $("a").click(function () {
-                                    $("html, body").animate({scrollTop: $($(this).attr("href")).offset().top -20+ "px"}, 500);
-                                    return false;
-                                });
-                            </pre>
-                        </blockquote>
+                        <pre class="layui-code">
+$("a").click(function () {
+    $("html, body").animate({scrollTop: $($(this).attr("href")).offset().top -20+ "px"}, 500);
+    return false;
+});
+                        </pre>
                     </div>
                 </fieldset>
             </div>
@@ -32,3 +30,8 @@
         </div>
     </div>
 </div>
+<script>
+    layui.use('code', function(){ //加载code模块
+        layui.code({skin: 'notepad',about:false}); //引用code方法
+    });
+</script>

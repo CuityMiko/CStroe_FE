@@ -1,0 +1,33 @@
+<style scoped>
+
+</style>
+<div id="dnotice">
+    <fieldset class="layui-elem-field">
+    <legend>系统通知</legend>
+        <div class="layui-field-box">
+            <form class="layui-form" action="">
+                <div class="layui-form-item layui-form-text">
+                    <label class="layui-form-label">文本域</label>
+                    <div class="layui-input-block">
+                        <textarea name="desc" id="txtnotice" required  lay-verify="required" placeholder="请输入内容" class="layui-textarea"></textarea>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                    <button class="layui-btn" type="button" id="btnSend">立即提交</button>
+                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                    </div>
+                </div>
+            </form>                      
+        </div>
+    </fieldset>
+</div>
+<script src="/admin/plugins/layui/lay/lib/jquery.js"></script>
+<script>
+    //var socket = io();
+	$(function(){
+        $("#btnSend").on("click",function(){
+            console.log($("#txtnotice").val())
+        })
+    })
+</script>

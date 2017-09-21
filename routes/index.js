@@ -30,4 +30,7 @@ module.exports = function(app) {
 
    // Css
    app.get('/wiki/css', Index.Wiki_css);
+
+   // 通知
+   app.get('/notice', Index.notice);
 };

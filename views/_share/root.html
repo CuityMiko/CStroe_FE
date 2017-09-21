@@ -13,6 +13,10 @@
     <link rel="stylesheet" href="/admin/plugins/layui/css/layui.css" media="all" />
     <link rel="stylesheet" href="/admin/css/global.css" media="all">
     <link rel="stylesheet" href="/admin/plugins/font-awesome/css/font-awesome.min.css">
+    <script type="text/javascript" src="/admin/plugins/layui/layui.js"></script>
+    <script type="text/javascript" src="/admin/datas/nav.js"></script>
+    <script src="/admin/js/index.js"></script>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
     <style>
         h1{
             font-size: 60px;
@@ -26,7 +30,7 @@
         <div class="layui-header header header-demo">
             <div class="layui-main">
                 <div class="admin-login-box">
-                    <a class="logo" style="left: 0;" href="http://beginner.zhengjinfan.cn/demo/beginner_admin/">
+                    <a class="logo" style="left: 0;" href="/">
                         <span style="font-size: 22px;">CStoreFE</span>
                     </a>
                 </div>
@@ -119,15 +123,29 @@
         <div class="site-tree-mobile layui-hide">
             <i class="layui-icon">&#xe602;</i>
         </div>
-
-
-        <script type="text/javascript" src="/admin/plugins/layui/layui.js"></script>
-        <script type="text/javascript" src="/admin/datas/nav.js"></script>
-        <script src="/admin/js/index.js"></script>
         <script>
+            var socket = io();
+            
             layui.use('layer', function() {
                 var $ = layui.jquery,
                     layer = layui.layer;
+
+                // 监听从服务器端传过来的消息
+                socket.on("notice",function(msg){
+                    if(msg){
+                        layer.open({
+                            title: '系统通知',
+                            content: msg,
+                            offset: 'rb', // 右下角显示
+                            skin: 'layui-layer-lan',
+                            area:['400px', '240px'],
+                            shade: 0,
+                            time: 10000,
+                            anim: 6,
+                            isOutAnim: true
+                        });
+                    }
+                });
             });
         </script>
     </div>

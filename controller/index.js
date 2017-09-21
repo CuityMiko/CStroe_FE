@@ -46,3 +46,10 @@ exports.ET_rn = function(req, res) {
     res.render('environment/rn');
 };
 
+// 通知
+exports.notice = function(req, res) {
+    if(req.query.desc)
+        console.log(req.query.desc)
+    res.render('notice/index');
+};
+

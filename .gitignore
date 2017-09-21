@@ -74,3 +74,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 public/tools/
+node_project_nodedev.bat

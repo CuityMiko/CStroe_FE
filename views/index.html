@@ -1,6 +1,7 @@
 <style scoped>
     #app{
-        margin-top: 9rem;
+        margin-top: 2.4rem;
+        height:100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -11,3 +12,19 @@
     <h1>Welcome to CStoreFE</h1>
     <img src="/images/FE.jpg" alt="" srcset="">
 </div>
+<script>
+    layui.use('layer', function(){
+        var layer = layui.layer;
+        layer.open({
+            title: '温馨提示',
+            content: 'Welcome to CStoreFE',
+            offset: 'rb', // 右下角显示
+            skin: 'layui-layer-lan',
+            area:['400px', '240px'],
+            shade: 0,
+            time: 5000,
+            anim: 6,
+            isOutAnim: true
+        }); 
+    });
+</script>
