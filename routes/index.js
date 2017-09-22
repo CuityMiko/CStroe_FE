@@ -16,6 +16,9 @@ module.exports = function(app) {
   // Jquery
   app.get('/wiki/jquery', Index.jquery);
 
+  // js
+  app.get('/wiki/js', Index.Wiki_js);
+
   // Code
   app.get('/wiki/code', Index.code);
 

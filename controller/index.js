@@ -53,3 +53,8 @@ exports.notice = function(req, res) {
     res.render('notice/index');
 };
 
+// Wiki_js
+exports.Wiki_js = function(req, res) {
+    res.render('wiki/js');
+};
+
