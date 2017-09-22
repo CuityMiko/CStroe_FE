@@ -22,12 +22,20 @@
         </div>
     </fieldset>
 </div>
-<script src="/admin/plugins/layui/lay/lib/jquery.js"></script>
+<script src="/bower_components//jquery/dist/jquery.min.js"></script>
 <script>
-    //var socket = io();
+    var socket = io();
 	$(function(){
         $("#btnSend").on("click",function(){
-            console.log($("#txtnotice").val())
+            if($("#txtnotice").val().trim().length>0){
+                socket.emit("send", $("#txtnotice").val().trim());
+            }else{
+                layui.use('layer', function() {
+                    var $ = layui.jquery,
+                        layer = layui.layer;
+                    layer.msg('请输入内容！')
+                });
+            }
         })
     })
 </script>
