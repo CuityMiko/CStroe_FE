@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <title>CStoreFE</title>
@@ -18,7 +19,7 @@
     <script src="/admin/js/index.js"></script>
     <script type="text/javascript" src="/socket.io/socket.io.js"></script>
     <style>
-        h1{
+        h1 {
             font-size: 60px;
             margin-bottom: 3rem;
         }
@@ -64,6 +65,7 @@
                             <dd><a href="/wiki/code">Code</a></dd>
                             <dd><a href="http://es6.ruanyifeng.com/" target="_blank">ES6</a></dd>
                             <dd><a href="/wiki/css" target="_blank">CSS</a></dd>
+                            <dd><a href="https://doc.webpack-china.org/">webpack</a></dd>
                         </dl>
                         <dl class="layui-nav-child">
                             <dd><a target="_blank" href="https://www.awesomes.cn/repos/Applications/frameworks?sort=trend">前端技术趋势</a></dd>
@@ -132,20 +134,20 @@
         </div>
         <script>
             var socket = io();
-            
+
             layui.use('layer', function() {
                 var $ = layui.jquery,
                     layer = layui.layer;
 
                 // 监听从服务器端传过来的消息
-                socket.on("notice",function(msg){
-                    if(msg){
+                socket.on("notice", function(msg) {
+                    if (msg) {
                         layer.open({
                             title: '系统通知',
                             content: msg,
                             offset: 'rb', // 右下角显示
                             skin: 'layui-layer-lan',
-                            area:['400px', '240px'],
+                            area: ['400px', '240px'],
                             shade: 0,
                             time: 10000,
                             anim: 6,
@@ -157,4 +159,5 @@
         </script>
     </div>
 </body>
+
 </html>

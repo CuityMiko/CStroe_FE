@@ -1,4 +1,4 @@
 E:
-cd E:\Company\Code\cstroe_FE\bin
+cd E:\FE\CStroe_FE\bin
 node-dev www
 
